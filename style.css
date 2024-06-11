@@ -1,0 +1,265 @@
+/* color scheme */
+/*  #FCA424
+    #0DD39D
+    #1A1A1A
+    #CDCDCD
+    #FEFEFE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* fontt-size: 10px */
+  /* 10px / 16px = 0.625 =62.5%  */
+  /* percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+/*************************/
+/* GENERAL REUSABLE COMPONENTS */
+/*************************/
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+.grid--2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/*************************/
+/* HEADER */
+/*************************/
+
+.header {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(img/mountain.jpg);
+  background-size: cover;
+  background-position: 0 70rem;
+  margin: 0 auto;
+  height: 29rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/*************************/
+/* NAVIGATION */
+/*************************/
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  margin-bottom: 4.8rem;
+}
+
+.logo {
+  font-size: 1.2rem;
+}
+.logo-link {
+  text-decoration: none;
+  color: #fefefe;
+  font-size: 1.3rem;
+}
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  gap: 3.2rem;
+}
+
+.nav-btn {
+  padding: 1.2rem 1.2rem;
+  background-color: rgba(205, 205, 205, 0.2);
+  border-radius: 0.3rem;
+}
+.nav-notification {
+  display: block;
+  font-size: 2.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #cdcdcd;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: inline-block;
+
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #fca424;
+}
+
+.nav-img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 3px;
+  margin-left: 5px;
+  object-fit: cover;
+}
+
+/*************************/
+/* HERO-SECTION */
+/*************************/
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.6rem;
+  justify-items: end;
+  position: relative;
+  margin: 0 4rem;
+}
+
+.hero-img {
+  height: 21rem;
+  width: 21rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.05);
+  object-fit:cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bio {
+  grid-row: span 2;
+  margin: 0 auto 0 23rem;
+}
+
+.greeting {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fefefe;
+  margin-bottom: 1.8rem;
+}
+
+.bio-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.bio-detail {
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.bio-detail span {
+  color: #cdcdcd;
+  margin-bottom: 1rem;
+}
+
+.hero-completion {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2.4rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.4rem;
+}
+
+.progress {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background-image: conic-gradient(#819196 25%, #fca424 0%);
+  display: grid;
+  place-items: center;
+}
+
+.progress-inner {
+  height: 6.4rem;
+  width: 6.4rem;
+  background-color: #62777e;
+  background-color: #416069;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.progress-inner p {
+  font-size: 1.4rem;
+  color: #eee;
+  background-color: #86949a;
+  background-color: #819196;
+  height: 5.2rem;
+  width: 5.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.hero-completion .title {
+  color: #fefefe;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.hero-completion .request {
+  color: #cdcdcd;
+  font-size: 1.2rem;
+  margin-bottom: 2.6rem;
+}
+
+.btn.btn--complete {
+  background-color: #fca424;
+  padding: 0.8rem 0.8rem;
+  text-decoration: none;
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.btn.btn--complete:hover,
+.btn.btn--complete:active,
+.btn.btn--pay:hover,
+.btn.btn--pay:active {
+  background-color: #ec8e02;
+}
+
+.camera {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.4rem;
+  border-radius: 0.2rem;
+  transition: all 0.3s;
+}
+
+.camera:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.camera-icon {
+  font-size: 1.6rem;
+  color: #cdcdcd;
+}
