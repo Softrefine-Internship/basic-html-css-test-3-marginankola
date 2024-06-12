@@ -26,20 +26,7 @@ body {
 /*************************/
 /* GENERAL REUSABLE COMPONENTS */
 /*************************/
-.grid {
-  display: grid;
-  row-gap: 9.6rem;
-  column-gap: 6.4rem;
-}
-.grid--2cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--3cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-.grid--4cols {
-  grid-template-columns: repeat(4, 1fr);
-}
+
 
 /*************************/
 /* HEADER */
@@ -47,15 +34,16 @@ body {
 
 .header {
   background-image: linear-gradient(
-      to bottom right,
-      rgba(0, 0, 0, 0.3),
+      to bottom,
+      rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
     url(img/mountain.jpg);
   background-size: cover;
   background-position: 0 70rem;
   margin: 0 auto;
-  height: 29rem;
+  margin-bottom: 1.8rem;
+  height: 26.5rem;
 }
 
 .logo {
@@ -71,7 +59,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 4rem;
-  margin-bottom: 4.8rem;
+  margin-bottom: 2.4rem;
 }
 
 .logo {
@@ -141,7 +129,7 @@ body {
   width: 21rem;
   border-radius: 0.4rem;
   box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.05);
-  object-fit:cover;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -153,7 +141,7 @@ body {
 }
 
 .greeting {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 400;
   color: #fefefe;
   margin-bottom: 1.8rem;
@@ -250,7 +238,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 0.5rem 0.4rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 0.2rem;
   transition: all 0.3s;
 }
@@ -262,4 +250,183 @@ body {
 .camera-icon {
   font-size: 1.6rem;
   color: #cdcdcd;
+}
+/*************************/
+/* SECTION-CONTENT */
+/*************************/
+
+.section-content
+{
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  gap: 3.2rem;
+}
+
+/*************************/
+/* ABOUT-ME */
+/*************************/
+
+.about
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: 1rem;
+  margin-top: 4rem;
+  margin-left: 3.8rem;
+}
+
+.about-title
+{
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+.family-category-title
+{
+  color: #cdcdcd;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.family-img
+{
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right:1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.about-me-info span
+{
+  color: #cdcdcd;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.about-me-info p 
+{
+  margin-bottom: 0.8rem;
+}
+/*************************/
+/* SECONDARY-NAV */
+/*************************/
+
+.secondary-nav {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 6.2rem;
+}
+.secondary-nav-list {
+  display: flex;
+  list-style: none;
+  gap: 4.2rem;
+}
+.secondary-nav-link:link,
+.secondary-nav-link:visited, .secondary-nav-link:active {
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  font-weight: 500;
+  color: #cdcdcd;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.secondary-nav-list .active-link
+{
+  color: #1a1a1a;
+  font-size: 1.6rem;
+  padding: 0;
+  padding-bottom: 1.6rem;
+  box-shadow: 0 3px 0  #ec8e02;
+}
+
+.btn--claim
+{
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  color: #fefefe;
+  background-color: #0DD39D;
+  margin-top: -0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/*************************/
+/* DASHBOARD */
+/*************************/
+
+
+.dashboard {
+  padding: 2.4rem 4.8rem 3.2rem 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.6rem;
+  row-gap: 1.6rem;
+}
+
+.claim-card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 0.2rem 1.2rem 0.2rem rgba(0, 0, 0, 0.05);
+}
+
+.claim-number {
+  font-size: 6.2rem;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: -1px;
+}
+
+.claim-text {
+  padding-left: 1.6rem;
+  border-left: 1px solid #ddd;
+}
+
+.claim-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 1.8rem;
+}
+
+.claim-imgs {
+  display: flex;
+  position: relative;
+}
+
+.claim-img {
+  height: 3.2rem;
+  width: 3.2rem;
+  border: 2px solid #fefefe;
+  border-radius: 50%;
+  margin-right: -1.2rem;
+}
+
+.claim-img:last-child {
+  margin-right: 0;
+  background-image: linear-gradient(to right,rgba(13, 211, 158, 0.7),rgba(13, 211, 158, 0.7));
+}
+
+.claim-imgs::after {
+  content: "+32";
+  display: grid;
+  place-items: center;
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #eee;
+  background-color: rgba(13, 211, 158, 0.7);
+  position: absolute;
+  top: 0;
+  left: 6rem;
 }
