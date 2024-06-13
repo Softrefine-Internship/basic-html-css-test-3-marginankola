@@ -271,7 +271,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 4rem;
   margin-left: 3.8rem;
 }
@@ -310,7 +310,7 @@ body {
 }
 .about-me-info p 
 {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
 }
 /*************************/
 /* SECONDARY-NAV */
